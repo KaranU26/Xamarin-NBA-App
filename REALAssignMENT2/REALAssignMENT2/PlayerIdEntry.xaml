@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="REALAssignMENT2.PlayerIdEntry" Title="Player Statistics Search">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1" Placeholder="Enter Player ID" Text="" x:Name="playersID"/>
+            <Button Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="2" BackgroundColor="OrangeRed"  HeightRequest="60" FontAttributes="Bold" FontSize="Medium" TextColor="White" Text="Search" Clicked="Button_Clicked" BorderColor="White" BorderWidth="5"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="REALAssignMENT2.PlayerStatsDisplay" Title="Player Statistics">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="playerStatsList" HasUnevenRows="True" VerticalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+
+                                <Grid Padding="20,7,10,10">
+
+                                    <Label Text="Points: "></Label>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding points}" FontAttributes="Bold" Padding="50,0,0,0"/>
+                                    <Label Text="Minutes: " Grid.Row="1" Grid.Column="0"></Label>
+                                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding min}" FontAttributes="Bold" Padding="60,0,0,0"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="Position: "></Label>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding pos}" FontAttributes="Bold"  TextColor="Black" Padding="60,0,0,0"/>
+                                    <Label Grid.Row="1" Grid.Column="1" Text="FGM: "></Label>
+                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding fgm}" FontAttributes="Bold" TextColor="Black" Padding="40,0,0,0"/>
+                                    <Label Grid.Row="1" Grid.Column="1" Text="FGA: " Padding="60,0,0,0"></Label>
+                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding fga}" FontAttributes="Bold" TextColor="Black" Padding="90,0,0,0"/>
+                                    <Label Grid.Row="2" Grid.Column="0" Text="Total Rebounds: "></Label>
+                                    <Label Grid.Row="2" Grid.Column="0" Text="{Binding totReb}" FontAttributes="Bold"  TextColor="Black" Padding="100,0,0,0"/>
+                                    <Label Grid.Row="2" Grid.Column="1" Text="Turnovers: "></Label>
+                                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding turnovers}" FontAttributes="Bold"  TextColor="Black" Padding="70,0,0,0"/>
+                                    <Label Grid.Row="3" Grid.Column="0" Text="Steals: "></Label>
+                                    <Label Grid.Row="3" Grid.Column="0" Text="{Binding steals}" FontAttributes="Bold"  TextColor="Black" Padding="50,0,0,0"/>
+                                    <Label Grid.Row="3" Grid.Column="1" Text="Blocks: "></Label>
+                                    <Label Grid.Row="3" Grid.Column="1" Text="{Binding blocks}" FontAttributes="Bold"  TextColor="Black" Padding="50,0,0,0"/>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="REALAssignMENT2.AddPlayerScreen" Title="Add a Player">
+    <ContentPage.Content>
+        <RelativeLayout BackgroundColor="LightBlue">
+            <Image x:Name="poster" Source="https://clutchpoints.com/wp-content/uploads/2020/06/Greatest-NBA-Players-Best-NBA-Players-Ranking-NBA-Players-NBA-Goat.-Who-Is-The-Best-Player-Ever-1.jpg"
+			RelativeLayout.WidthConstraint="{ConstraintExpression
+				Type=RelativeToParent,
+				Property=Width,
+				Factor=1
+				}"
+
+			RelativeLayout.HeightConstraint="{ConstraintExpression
+				Type=RelativeToParent,
+				Property=Height,
+				Factor=0.4
+				}"
+		/>
+            <StackLayout Padding="50"
+			RelativeLayout.YConstraint="{ConstraintExpression
+				Type=RelativeToView,
+				ElementName=poster,
+				Property=Height,
+				Factor=1
+				}" 
+			>
+                <Label Text="Please Add a Player" FontSize="Large" FontAttributes="Bold" TextColor="DarkBlue"></Label>
+                <Grid>
+                 
+                    <Entry Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" x:Name="player" Placeholder="Player Name" Text=""/>
+                    <Label Text=" Do you want this player to be permanent?" Grid.Column="0" Grid.Row="1"/>
+                    <Switch IsToggled="True" x:Name="Permanent"  Grid.Column="1" Grid.Row="1" Toggled="Permanent_Toggled"  />
+                    <Button Text="Add Player" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" BackgroundColor="AliceBlue" Clicked="Button_Clicked"/>
+                </Grid>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="REALAssignMENT2.West" Title="Western Conference">
+    <ContentPage.Content>
+        <ListView x:Name="westDetails" ItemSelected="westDetails_ItemSelected" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout HorizontalOptions="Fill">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="70"/>
+                                        <ColumnDefinition Width="100"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="City:" Grid.Column="1" FontAttributes="Bold"></Label>
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding city}" Grid.ColumnSpan="4"></Label>
+                                    <Label Text="Full Team: " Grid.Row="1" Grid.Column="1" FontAttributes="Bold"></Label>
+                                    <Label Grid.Row="1" Grid.Column="2" Text="{Binding fullName}" Grid.ColumnSpan="2"></Label>
+                                    <Label Text="TeamID: " Grid.Column="4" FontAttributes="Bold"></Label>
+                                    <Label Grid.Row="0" Grid.Column="5" Text="{Binding teamId}"></Label>
+                                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding nickName}"></Label>
+                                    <Image Source="{Binding logo}" Grid.Column="0" Grid.RowSpan="4" HorizontalOptions="StartAndExpand" Grid.ColumnSpan="1"></Image>
+                                    <Label Text="Short Name:" FontAttributes="Bold" Grid.Row="2" Grid.Column="1"></Label>
+                                    <Label Grid.Row="2" Grid.Column="2" Text="{Binding shortName}"></Label>
+                                </Grid>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

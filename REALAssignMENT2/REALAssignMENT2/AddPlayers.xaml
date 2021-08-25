@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="REALAssignMENT2.AddPlayers" Title="Player List">
+    <ContentPage.Content>
+        <RelativeLayout Padding="10" Opacity="100">
+            <StackLayout
+            HorizontalOptions="Fill"
+            VerticalOptions="Center"
+            RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.5}
+            "
+            RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width,
+            Factor=1}">
+                <Grid>
+                    <Image Source="https://cdn.hipwallpaper.com/i/89/70/OgQB4p.jpg" Grid.ColumnSpan="2" Grid.RowSpan="5"></Image>
+                    <Grid Grid.Column="1">
+                    
+                        <Button Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="2" BackgroundColor="OrangeRed"  HeightRequest="60" FontAttributes="Bold" FontSize="Medium" TextColor="White" Text="Add New Player" Clicked="addNewPlayer" BorderColor="White" BorderWidth="5"></Button>
+                    </Grid>
+               
+                    <Entry Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1" x:Name="player" Placeholder="Enter Player Name" Text="{Binding player}"/>
+                    <Label Text="Add permanently to list?" FontAttributes="Bold" FontSize="Medium" TextColor="black" Grid.Column="0" Grid.Row="2"/>
+                    <Switch IsToggled="{Binding Permanent}"  Grid.Column="0" Grid.Row="3" x:Name="Permanent"   />
+                    <Button Grid.Row="4" Grid.Column="0" BackgroundColor="LightGreen"  Text="Update" Clicked="updatePlayer" BorderColor="White" BorderWidth="5"/>
+                    <Button Text="Delete" Grid.Column="1" Grid.Row="4"  BackgroundColor="LightGreen" Clicked="deletePlayer" BorderColor="White" BorderWidth="5"/>
+                </Grid>
+
+            </StackLayout>
+            <ListView x:Name="playerListView" ItemSelected="Item_Selected" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.5}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout HorizontalOptions="StartAndExpand">
+
+                                <Grid Padding="10,7,10,10">
+
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding player}" x:Name="Name" FontAttributes="Bold" FontSize="Medium" TextColor="Red"  />
+                                    <Label Grid.Row="0" Grid.Column="1" Text="Permanent Status: "></Label>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Permanent}" FontAttributes="Bold" x:Name="Permanent" TextColor="Black" Padding="120,0,0,0"/>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

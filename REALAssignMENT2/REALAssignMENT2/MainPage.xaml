@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="REALAssignMENT2.MainPage" Title="Welcome to the NBA Teams App" BackgroundColor="LightGray">
+
+    <StackLayout>
+        <Image Source="https://a.espncdn.com/photo/2021/0604/nba_semi-final-v2_16x9.jpg"></Image>
+        <Button Text="Eastern Conference" BackgroundColor="IndianRed" HeightRequest="75" Clicked="Button_Clicked" FontAttributes="Bold" FontSize="Medium"></Button>
+        <Button Text="Western Conference" BackgroundColor="CornflowerBlue" HeightRequest="75" Clicked="Button_Clicked_1" FontAttributes="Bold" FontSize="Medium"></Button>
+        <Button Text="Players" HeightRequest="75" BackgroundColor="GreenYellow" Clicked="Button_Clicked_2" FontAttributes="Bold" FontSize="Medium"></Button>
+        <Button Text="Statistics Search" HeightRequest="75" BackgroundColor="OrangeRed" Clicked="Button_Clicked_3" FontAttributes="Bold" FontSize="Medium"></Button>
+    </StackLayout>
+
+</ContentPage>
